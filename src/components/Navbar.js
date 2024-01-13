@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <div className="flex flex-row justify-between">
         <div>
-          <input type="text" className="w-[655px] h-[52px] border-2  rounded-[3px] myplace placeholder:ml-10" placeholder="Search" />
+          <input type="text" className="w-[655px] h-[52px] border-2  rounded-[3px] myplace placeholder:ml-5 placeholder:mt-3" placeholder="Search" />
         </div>
         <div className="flex flex-row">
           <div className="relative">
