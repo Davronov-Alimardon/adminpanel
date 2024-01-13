@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.myplace {
+  @apply relative;
+  /* Add the 'relative' utility class for relative positioning */
+  background: url('./icons/search-normal.svg') no-repeat;
+  background-size: 24px 24px;
+  background-position: 20px center;
+  padding-top: 0;
+  /* Set top padding to 0 */
+  padding-right: 0;
+  /* Set right padding to 0 */
+  padding-bottom: 0;
+  padding-left: 60px;
+  /* Adjust the left padding to leave space for the icon and position the placeholder */
+}
+
+.myplace::placeholder {
+  @apply absolute inset-y-0 left-12;
+  /* Use Tailwind CSS utility classes for positioning */
+  font-family: 'Poppins', sans-serif;
+  /* Apply the Poppins font */
+  opacity: 0.7;
 }
